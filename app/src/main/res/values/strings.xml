@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">hack-yeah-2024-cycle-v2</string>
-    <string name="mapbox_public_access_token">pk.eyJ1IjoicGVpdnVsIiwiYSI6ImNtMWR4amczdzBlZGoybXM5NXVhc25yZHMifQ.W0Hpw7-LaMjmm1QF1_PDqQ</string>
+    <string name="mapbox_access_token" translatable="false" tools:ignore="UnusedResources">pk.eyJ1IjoicGVpdnVsIiwiYSI6ImNtMWR4amczdzBlZGoybXM5NXVhc25yZHMifQ.W0Hpw7-LaMjmm1QF1_PDqQ</string>
 </resources>

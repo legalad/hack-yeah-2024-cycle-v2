@@ -12,6 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.legalad.hack_yeah_2024_cycle_v2.ui.theme.Hackyeah2024cyclev2Theme
+import com.mapbox.maps.extension.compose.MapboxMap
+import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
+import com.mapbox.maps.plugin.viewport.DEFAULT_FOLLOW_PUCK_VIEWPORT_STATE_ZOOM
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +23,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             Hackyeah2024cyclev2Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    MapboxMap(
+                        modifier = Modifier.fillMaxSize().padding(innerPadding),
+                        mapViewportState = rememberMapViewportState()
                     )
                 }
             }
