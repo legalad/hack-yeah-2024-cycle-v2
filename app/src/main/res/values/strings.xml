@@ -1,4 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">hack-yeah-2024-cycle-v2</string>
     <string name="mapbox_access_token" translatable="false" tools:ignore="UnusedResources">pk.eyJ1IjoicGVpdnVsIiwiYSI6ImNtMWR4amczdzBlZGoybXM5NXVhc25yZHMifQ.W0Hpw7-LaMjmm1QF1_PDqQ</string>
+    <string name="parking_lots">Parkingi</string>
+    <string name="cycle_friendly_place">Miejsce przyjazne rowerzystom</string>
+    <string name="shelters">Wiaty</string>
+    <string name="impedements">Objazdy i utrudnienia</string>
+    <string name="recommended_routes">Rekomendowane trasy</string>
+    <string name="road_surface">Rodzaj nawierzchni</string>
+    <string name="traffic">Natężenie ruchu</string>
+    <string name="recommendation">Kasyno</string>
+    <string name="swipe_to_close">Przeciągnij, żeby zamknąć</string>
 </resources>

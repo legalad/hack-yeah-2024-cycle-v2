@@ -29,10 +29,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.isTraversalGroup
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.traversalIndex
 import androidx.compose.ui.unit.dp
+import com.legalad.hack_yeah_2024_cycle_v2.R
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -42,10 +44,15 @@ fun NavSearchBar(
     val textFieldState = rememberTextFieldState()
     var expanded by rememberSaveable { mutableStateOf(false) }
 
-    Box(Modifier.fillMaxSize().semantics { isTraversalGroup = true }) {
+    Box(
+        Modifier
+            .fillMaxSize()
+            .semantics { isTraversalGroup = true }) {
         SearchBar(
             query = "",
-            modifier = Modifier.align(Alignment.TopCenter).semantics { traversalIndex = 0f },
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .semantics { traversalIndex = 0f },
             onSearch = { expanded = false },
             onQueryChange = {},
             placeholder = { Text("Gdzie dzisiaj jedziemy?") },
@@ -59,14 +66,15 @@ fun NavSearchBar(
                     val resultText = "Suggestion $idx"
                     ListItem(
                         headlineContent = { Text(resultText) },
-                        supportingContent = { Text("Kasyno") },
+                        supportingContent = { Text(stringResource(R.string.recommendation)) },
                         leadingContent = { Icon(Icons.Filled.Star, contentDescription = null) },
                         colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                         modifier =
-                        Modifier.clickable {
-                            textFieldState.setTextAndPlaceCursorAtEnd(resultText)
-                            expanded = false
-                        }
+                        Modifier
+                            .clickable {
+                                textFieldState.setTextAndPlaceCursorAtEnd(resultText)
+                                expanded = false
+                            }
                             .fillMaxWidth()
                             .padding(horizontal = 16.dp, vertical = 4.dp)
                     )

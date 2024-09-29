@@ -1,11 +1,9 @@
-package com.legalad.hack_yeah_2024_cycle_v2.ui
+package com.legalad.hack_yeah_2024_cycle_v2.presentation
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.legalad.hack_yeah_2024_cycle_v2.ui.utils.Layer
-import com.legalad.hack_yeah_2024_cycle_v2.ui.utils.layersData
-import kotlinx.coroutines.flow.Flow
+import com.legalad.hack_yeah_2024_cycle_v2.data.Layer
+import com.legalad.hack_yeah_2024_cycle_v2.data.layersData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

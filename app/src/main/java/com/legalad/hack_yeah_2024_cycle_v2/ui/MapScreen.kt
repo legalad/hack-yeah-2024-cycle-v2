@@ -18,7 +18,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.legalad.hack_yeah_2024_cycle_v2.R
+import com.legalad.hack_yeah_2024_cycle_v2.presentation.MapScreenViewModel
 import com.legalad.hack_yeah_2024_cycle_v2.ui.components.CommonSwitch
 import com.legalad.hack_yeah_2024_cycle_v2.ui.components.NavSearchBar
 import com.mapbox.maps.extension.compose.MapEffect
@@ -27,6 +30,8 @@ import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportS
 import com.mapbox.maps.extension.compose.style.MapStyle
 import com.mapbox.maps.extension.style.layers.getLayer
 import com.mapbox.maps.extension.style.layers.properties.generated.Visibility
+
+private const val CUSTOM_MAP_STYLE = "mapbox://styles/peivul/cm1m0jkdm00im01ph66thdcdf"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -47,7 +52,7 @@ fun MapScreen(
             ) {
                 Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Text(
-                        text = "Przeciągnij, żeby zamknąć",
+                        text = stringResource(R.string.swipe_to_close),
                         style = MaterialTheme.typography.labelLarge
                     )
                 }
@@ -64,7 +69,7 @@ fun MapScreen(
                             modifier = Modifier.padding(vertical = 8.dp)
                         )
                         Text(
-                            text = layer.title,
+                            text = stringResource(layer.titleId),
                             modifier = Modifier
                                 .weight(1f)
                                 .padding(start = 12.dp)
@@ -88,7 +93,7 @@ fun MapScreen(
                 modifier = Modifier.fillMaxSize(),
                 style = {
                     MapStyle(
-                        style = "mapbox://styles/peivul/cm1m0jkdm00im01ph66thdcdf",
+                        style = CUSTOM_MAP_STYLE,
                     )
                 },
                 mapViewportState = rememberMapViewportState()

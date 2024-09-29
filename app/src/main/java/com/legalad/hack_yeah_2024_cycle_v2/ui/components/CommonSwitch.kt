@@ -23,7 +23,6 @@ fun CommonSwitch(
         onCheckedChange = isCheckedChange,
         thumbContent = {
             if (isChecked) {
-                // Icon isn't focusable, no need for content description
                 Icon(
                     imageVector = Icons.Filled.Check,
                     contentDescription = null,
