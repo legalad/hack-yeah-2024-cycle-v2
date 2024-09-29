@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">hack-yeah-2024-cycle-v2</string>
+    <string name="parking_lots">Parking lots</string>
+    <string name="cycle_friendly_place">Velo friendly</string>
+    <string name="shelters">Shed</string>
+    <string name="impedements">Impendements</string>
+    <string name="recommended_routes">Recommended routes</string>
+    <string name="road_surface">Road surface</string>
+    <string name="traffic">Traffic</string>
+    <string name="recommendation">Casino</string>
+    <string name="swipe_to_close">Swipe to dismiss</string>
+</resources>
